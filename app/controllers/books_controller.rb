@@ -62,20 +62,23 @@ class BooksController < ApplicationController
     end
   end
 
-  # To add and remove books from/to book library for current user
+  # Add and remove books to library
+  # for current_user
   def library
     type = params[:type]
 
     if type == "add"
       current_user.library_additions << @book
       redirect_to library_index_path, notice: "#{@book.title} was added to your library"
+
     elsif type == "remove"
       current_user.library_additions.delete(@book)
       redirect_to root_path, notice: "#{@book.title} was removed from your library"
     else
-      #type missing nothing happens
-      redirect_to book_path(@book), notice: "Nothing is happening. Please try again!"
+      # Type missing, nothing happens
+      redirect_to book_path(@book), notice: "Looks like nothing happened. Try once more!"
     end
+
   end
 
   private
@@ -84,8 +87,8 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :description, :author, :user_id)
+      params.require(:book).permit(:title, :description, :author, :thumbnail, :user_id)
     end
 end
