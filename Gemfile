@@ -70,7 +70,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bulma-rails'
 gem 'sidekiq'
-gem 'stripe', '~> 3.13'
+gem 'stripe'
 group :development, :test do
   gem 'better_errors'
   gem 'guard'

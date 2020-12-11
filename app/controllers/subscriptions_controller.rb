@@ -1,7 +1,6 @@
 class SubscriptionsController < ApplicationController
     layout "subscribe"
     before_action :authenticate_user!, except: [:new, :create]
-
     def new
       if user_signed_in? && current_user.subscribed?
         redirect_to root_path, notice: "You are already a subscriber!"
@@ -9,6 +8,8 @@ class SubscriptionsController < ApplicationController
     end
 
     def create
+      require 'stripe'
+
       Stripe.api_key = Rails.application.credentials.stripe_api_key
 
       plan_id = params[:plan_id]
@@ -21,7 +22,12 @@ class SubscriptionsController < ApplicationController
                    Stripe::Customer.create(email: current_user.email, source: token)
                  end
 
-      subscription = customer.subscriptions.create(plan: plan.id)
+      subscription = Stripe::Subscription.create({
+         customer: customer.id,
+         items: [
+           {price: plan.id},
+                ],
+         })
 
       options = {
         stripe_id: customer.id,
