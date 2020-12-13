@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem 'haml'
+
+gem 'mail_form'
+
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'jquery-rails'

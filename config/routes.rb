@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'books#index'
   resources :subscriptions
+  resources :contacts, only: [:new, :create]
 end
