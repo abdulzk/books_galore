@@ -42,3 +42,14 @@ This Ruby on Rails app is a books subscription service which lets the user choos
 - `user.save`
 
 You will then see a new 'New Book' button appear which allows the admin to add titles with thumbnails, author nae and synopsis/description.
+
+# Screenshots
+
+<img width="1360" alt="Screenshot 2020-12-14 at 12 11 30" src="https://user-images.githubusercontent.com/28578569/103176823-ede7ee80-486c-11eb-81b9-369cacbe6e27.png">
+<img width="1359" alt="Screenshot 2020-12-14 at 12 11 46" src="https://user-images.githubusercontent.com/28578569/103176865-3e5f4c00-486d-11eb-96ec-78dc96d4be38.png">
+<img width="1359" alt="Screenshot 2020-12-14 at 12 14 59" src="https://user-images.githubusercontent.com/28578569/103176884-58009380-486d-11eb-93b5-dabec4bf8006.png">
+<img width="1358" alt="Screenshot 2020-12-14 at 12 13 27" src="https://user-images.githubusercontent.com/28578569/103176898-6a7acd00-486d-11eb-9402-c611da53083b.png">
+<img width="1358" alt="Screenshot 2020-12-14 at 12 13 45" src="https://user-images.githubusercontent.com/28578569/103176910-8a11f580-486d-11eb-8ed8-426f3747b993.png">
+<img width="1360" alt="Screenshot 2020-12-14 at 12 14 22" src="https://user-images.githubusercontent.com/28578569/103176915-9ac26b80-486d-11eb-8e2f-542a4fe898cf.png">
+<img width="1359" alt="Screenshot 2020-12-14 at 12 15 53" src="https://user-images.githubusercontent.com/28578569/103176925-ad3ca500-486d-11eb-9816-beaeffe125cc.png">
+<img width="1357" alt="Screenshot 2020-12-14 at 12 16 43" src="https://user-images.githubusercontent.com/28578569/103176936-c2b1cf00-486d-11eb-9305-8cdf71b793eb.png">
